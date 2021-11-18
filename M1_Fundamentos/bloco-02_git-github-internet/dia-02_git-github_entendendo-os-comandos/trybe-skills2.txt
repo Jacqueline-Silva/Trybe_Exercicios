@@ -5,3 +5,5 @@
 - Bash
 - Git
 
+Terminal
+Linux
