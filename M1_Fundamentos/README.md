@@ -1,10 +1,9 @@
 ------------------------------------
 # FUNDAMENTOS DO DESENVOLVIMENTO WEB
-------------------------------------
 
-O objetivo deste módulo é nos preparar para os próximos módulos.
+### O objetivo deste módulo é nos preparar para os seguintes módulos e para isso o conteúdo foi separado em blocos, sendo eles:
 
-- [ ] Bloco 01 - _Unix e Bash_
+- [X] Bloco 01 - _Unix e Bash_
 
 - [ ] Bloco 02 - _Git, GitHub e Internet_
 
