@@ -1,0 +1,12 @@
+h1, p {
+    text-align: center;
+}
+
+li {
+    transition: 2s;
+    list-style: none;
+}
+li:hover {
+    background: coral;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
