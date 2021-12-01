@@ -1,39 +1,35 @@
-// 1- difina o valor de A e B e faça operações aritmeticas //
-const a = 25;
-const b = 10;
-const c = 96;
+// exercicios part2 
+const base = 8;
+let height = 5;
+const area = base * height;
+console.log (area);
 
-console.log(adicao = a + b);
-console.log(subtracao = a - b);
-console.log(multiplicacao = a * b);
-console.log(divisao = a / b);
-console.log(modulo = a % b);
+// exercicios part3
+const notaDoCandidato = 78;
 
-// 2- se A for maior que B então retorna A //
-
-if (a > b) {
-    console.log(a)
-} else {
-    console.log()
+if (notaDoCandidato >= 80) {
+    console.log("Parabéns, você foi aprovado!");
+} else if (notaDoCandidato < 80 && notaDoCandidato >= 60) {
+    console.log ("Parabéns, você está na nossa lista de espera");
+} else if (notaDoCandidato < 60) {
+    console.log ("Você foi reprovado!")
 }
 
-// 3- retorne o maior valor de tres //
+// exercicios part5
+let estadoDoProcesso = "Lista";
 
+switch (estadoDoProcesso) {
+    case "Aprovada":
+ console.log ("Aprovada");
+ break;
 
+    case "Lista":
+ console.log ("Lista");
+ break;
 
+    case "Reprovada":
+console.log ("Reprovada")
 
-// 4- defina const para que a resposta seja positive ou negative ou zero //
-const fatorRhDaAna = "+";
-
-if (fatorRhDaAna === "+") {
-    console.log ("Positive");
-} else if (fatorRhDaAna === "-") {
-    console.log ("Negative")
-} else { 
-    console.log ("Zero")
+default:
+console.log ("Não se aplica")
 }
-return
-
-// 5- defina 3 constantes com valores de angulos internos de um triangulo. Para validar tem 
-// que ter soma de 180g 
-
