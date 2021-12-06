@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"></section>
+          <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+          </section>
+          Atenção!
+          <section id="terceiroFilho"></section>
+          <section id="quartoEUltimoFilho"></section>
+        </section>
+      </main>
+      <script>
+// Acesse o elemento elementoOndeVoceEsta .
+        document.querySelector("#elementoOndeVoceEsta");
+// Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+        let addCor = document.querySelector("#elementoOndeVoceEsta").parentElement
+        addCor.style.background = "yellow";
+// Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+        document.querySelector("#primeiroFilhoDoFilho").innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tellus ligula, lobortis id risus ut, tempor faucibus quam. Nullam elementum porta dui id ultricies. Nulla convallis ante non tellus lacinia feugiat. Ut efficitur tellus in venenatis posuere. Cras tincidunt turpis eget mi varius, et dignissim leo vehicula. Donec luctus eu ligula non venenatis. Vivamus maximus eget urna sit amet mattis. Etiam imperdiet, purus sit amet tristique scelerisque, metus mauris venenatis odio, sed pretium magna orci sit amet ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;"
+// Acesse o primeiroFilho a partir de pai .
+        document.querySelector("#pai").firstElementChild;
+// Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+        document.querySelector("#elementoOndeVoceEsta").previousElementSibling;
+// Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+        document.querySelector("#elementoOndeVoceEsta").nextSibling;
+// Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+        document.querySelector("#elementoOndeVoceEsta").nextElementSibling
+// Agora acesse o terceiroFilho a partir de pai .
+      //  document.querySelector("#pai").firstChild.nextSibling
+
+// Crie um irmão para elementoOndeVoceEsta .
+        let irmaoDoElementoOVE = document.createElement ('section');
+        document.querySelector('main').appendChild(irmaoDoElementoOVE)
+// Crie um filho para elementoOndeVoceEsta .
+       let filhoElementoOndeVoceEsta = document.createElement ('section');
+       filhoElementoOndeVoceEsta.id = "filhoDoElOndeVoceEsta";
+       document.querySelector('#elementoOndeVoceEsta').appendChild(filhoElementoOndeVoceEsta);
+
+// Crie um filho para primeiroFilhoDoFilho .
+       let filhoDoPrimeiroFilhoDoFilho = document.createElement ('section');
+       filhoDoPrimeiroFilhoDoFilho.id = "filhoDoPrimeiroFDF";
+       document.querySelector ('#primeiroFilhoDoFilho').appendChild(filhoDoPrimeiroFilhoDoFilho)
+
+// A partir desse filho criado, acesse terceiroFilho .
+        
+
+// Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+        // document.body.main.section.removeChild(filhoElementoOndeVoceEsta)
+
+
+    /* EXEMPLOS
+        let sec = document.querySelector("#second")
+        document.querySelector('main').removeChild(sec)
+
+        let f = document.querySelector ('#first')
+        f.remove
+
+        document.querySelector('main').appendChild(sec)
+        sec.childNodes
+        sec.childNodes[4]
+
+        sec.firstChild.nextSibling.nextSibling
+
+        sec.lastChild.previousSibling
+
+        let x = sec.firstChild
+
+        for (let i = 0; i < x.childNodes.length; i +=1) {
+            if (x.classList.contains('green')){
+            x.classList.remove ("green")
+            x.classList.add ("red")
+        }
+         x=x.nextSibling
+        }
+        
+
+    */
+
+      </script>
+</body>
+</html>
+
+<!-- COLA:
+.parentNode : retorna o nó pai.
+
+.parentElement : retorna o elemento pai.
+
+.childNodes : retorna um NodeList com todos os nós filhos.
+
+.children : retorna um HTMLCollection com todos os elementos filhos.
+
+.firstChild : retorna o primeiro nó filho.
+
+.firstElementChild : retorna o primeiro elemento filho.
+
+.lastChild : retorna o último nó filho.
+
+.lastElementChild : retorna o último elemento filho.
+
+.nextSibling : retorna o próximo nó.
+
+.nextElementSibling : retorna o próximo elemento.
+
+.previousSibling : retorna o nó anterior.
+
+.previousElementSibling : retorna o elemento anterior.
+
+
+
+.className = ; : adiciona uma classe
+
+.innetText = ""  : escrever dentro do HTML
+
+
+
+createElement (qual-elemento-quer-criar) : Cria um elemento
+
+appendChild (nome-do-filho-q-quer-add) : Adiciona no HTML
+
+removeChild () : remover elemento filho no HTML
+
+-->
