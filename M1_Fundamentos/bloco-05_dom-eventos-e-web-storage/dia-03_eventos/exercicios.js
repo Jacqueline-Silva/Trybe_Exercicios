@@ -29,11 +29,14 @@ function createDaysOfTheWeek() {
     listaDias.className = 'day'
     listaUL.appendChild(listaDias);
 
-    if (dezDaysList[dias] === 24 || dezDaysList[dias] === 25 ||dezDaysList[dias] === 31){
+    if (dezDaysList[dias] === 24||dezDaysList[dias] === 31){
         listaDias.className = 'day holiday';
     } 
-    if (dezDaysList[dias] === 4 || dezDaysList[dias] === 11 || dezDaysList[dias] === 18 || dezDaysList[dias] === 25){
-        listaDias.classList = 'day friday'
+    if (dezDaysList[dias] === 4 || dezDaysList[dias] === 11 || dezDaysList[dias] === 18){
+        listaDias.className = 'day friday'
+    }
+    if (dezDaysList[dias] === 25 ) {
+        listaDias.className = 'day holiday friday'
     }
   }
 
