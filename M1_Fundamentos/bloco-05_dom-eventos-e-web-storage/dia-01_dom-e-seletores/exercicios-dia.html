@@ -52,28 +52,32 @@
     - document.getElementsByClassName()
     - document.getElementsByTagName() */
 
-    //Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
-
-
-    let novaCor = document.body.getElementsByTagName('p')[0];
-    novaCor.style.color = "green";
+//Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+    let mudandoTexto = document.body.getElementsByTagName('p')[0];
+    mudandoTexto.innerText = 'Maecenas vehicula molestie tortor, nec consequat diam tempor sit amet. Phasellus mauris magna, hendrerit a risus sit amet, hendrerit fringilla massa. Nulla facilisi. Donec finibus tempus diam, sed hendrerit diam. Nullam vehicula libero eu tincidunt laoreet. Phasellus nec posuere enim. In hac habitasse platea dictumst.';
 
 
 // Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
-    let quadradoA = document.body.getElementsByClassName("main-content") 
-    quadradoA.style.color = "green";
+    let quadradoA = document.body.getElementsByClassName("main-content")[0]; 
+    quadradoA.style.background = "rgb(76,164,109)";
 
 // Crie uma função que mude a cor do quadrado vermelho para branco.
-
+    let quadradoB = document.body.getElementsByClassName("center-content")[0];
+    quadradoB.style.background = "white";
 
 // Crie uma função que corrija o texto da tag <h1>.
-
+    let textoTag = document.body.getElementsByTagName('h1')[0];
+    textoTag.innerText = "Exercício 5.1 - JavaScript";
 
 // Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
-
+    let tudoMaiusculo = document.body.getElementsByTagName('p')[0];
+    tudoMaiusculo.innerHTML = tudoMaiusculo.innerHTML.toUpperCase()
 
 // Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-
+    let todasTagsP = document.body.getElementsByTagName('p');
+    for (let i = 0; i < todasTagsP.length; i +=1){
+      console.log(todasTagsP[i].innerHTML)
+    }
 
 
   </script>
