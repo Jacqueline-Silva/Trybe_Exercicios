@@ -61,7 +61,7 @@
     </main>
     <script>
 // 1 - Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
-      let titulo = document.createElement('h3');
+      let titulo = document.createElement('h1');
       titulo.innerHTML = "Exercício 5.2";
       document.querySelector('body').appendChild(titulo);
 
@@ -87,20 +87,28 @@
 
 // 6 - Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
       let sectionRight = document.createElement ('section');
-      sectionLeft.className = 'right-content';
+      sectionRight.className = 'right-content';
       document.querySelector('main').appendChild(sectionRight);
 
 // ! 7 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
-     /* let img1 = document.createElement ('img');
+      let img1 = document.createElement ('img');
       img1.src = 'https://i.picsum.photos/id/873/200/200.jpg?hmac=5NCxS9ue78kUMON6P-hozaU4JQF_xfkczFyh6sfHLKQ';
       img1.className = 'small-image';
-      document.querySelector('.left-content').appendChild(img1); */
+      sectionLeft.appendChild (img1)
+      //document.querySelector('.left-content').appendChild(img1);
 
 
 // ! 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
-      let listaNO = document.createElement ('li');
-      listaNO.innerHTML = '[um, dois, três, quatro, cinco, seis, sete, oito, nove, dez]'
-      document.querySelector('.right-content').appendChild(listaNO);
+      let listaNO = document.createElement ('ul');
+      sectionRight.appendChild(listaNO);
+      let array = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      for (let i in array){
+        let listaLI = document.createElement('li');
+        listaLI.innerText = array[i];
+        listaNO.appendChild(listaLI)
+      }
+
+      
 
 // 9 - Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
       let primeiraH3 = document.createElement ('h3');
