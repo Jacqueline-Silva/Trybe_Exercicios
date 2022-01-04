@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <body>
     <header>
       <h2 id="page-title">Título</h2>
@@ -8,8 +9,26 @@
       <p id="second-paragraph">Segundo parágrafo!</p>
     </header>
     <script>
-      const paragraph = document.getElementById("paragraph");
+      let title = document.getElementById('page-title');
+      title.innerText = 'Olá Mundo!'
+
+      let paragraph = document.getElementById("paragraph");
       paragraph.style.color = "red";
+
+      let subtitle = document.getElementById('subtitle');
+      subtitle.innerText ='Será que o mundo vai responder?';
+
+      let secondParagraph = document.getElementById('second-paragraph');
+      paragraph.className = 'paragraphs';
+      secondParagraph.className = 'paragraphs';
+
+      console.log(document.getElementsByClassName('paragraphs'))
+
+      paragraph.style.fontStyle = 'italic';
+
+      
+
     </script>
+
   </body>
 </html>
