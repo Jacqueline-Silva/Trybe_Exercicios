@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMS</title>
+  <style>
+    #login {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <section id="login">
+    <h1>LOGIN</h1>
+    <form action="" method="get">
+      <label for="email">Email: 
+        <input type="email" name="email" id="email" placeholder="Digite aqui seu email" autocomplete="off" autofocus required>
+      </label>
+      <br>
+      <label for="pass">Senha: 
+        <input type="password" name="pass" id="pass" placeholder="Digite sua senha" required>
+      </label>  
+      <br>
+      <label for="lembrar">Lembre-me: 
+        <input type="checkbox" name="lembrar" id="lembrar">
+      </label>  
+      <br>
+      <button type="submit">Entrar</button>
+    </form>
+  </section>
+  <br>
+  <section>
+    <h2>NÃO TEM CONTA? CRIE UMA!</h2>
+    <h4>Complete as informações abaixo</h4>
+    <form action="" method="get">
+      <label for="name">Nome completo: 
+        <input type="text" name="name" id="name" placeholder="Digite seu nome completo" required>
+      </label>
+      <br>
+      <label for="nasc">Data de nascimento: 
+        <input type="date" name="nasc" id="nasc" required>
+      </label>
+      <br>
+      <label for="fem">
+        <input type="radio" name="sex" id="fem">Feminino 
+      </label>
+      <label for="mas">
+        <input type="radio" name="sex" id="mas">Masculino 
+      </label>
+      <label for="pref">
+        <input type="radio" name="sex" id="pref">Prefiro não responder 
+      </label>
+      <br>
+      <label for="estados">Estado onde mora: 
+        <select name="estados" id="estados">
+          <option value="SP" selected>São Paulo</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PR">Paraná</option>
+          <option value="RS">Rio Grande do Sul</option>
+        </select>
+      </label>
+      <br>
+      <label for="tel">Telefone: 
+        <input type="tel" name="tel" id="tel" placeholder="Digite seu celular">
+      </label>  
+      <br>
+      <label for="addft">Adicione uma foto: 
+        <input type="file" name="addft" id="addft">
+      </label>
+      <br>
+      <label for="cor">Cor do perfil: 
+        <input type="color" name="cor" id="cor">
+      </label>  
+      <br>
+      <label for="rsocial">Rede Social: 
+        <input type="url" name="rsocial" id="rsocial" placeholder="Cole a URL aqui">
+      </label>  
+      <br>
+      <p>Escreva algo sobre você: </p>
+      <textarea name="txts" id="txts" cols="55" rows="5"></textarea>
+      <br>
+      <label for="em">Email: 
+        <input type="email" name="em" id="em" placeholder="Digite seu melhor email" required>
+      </label>  
+      <br>
+      <label for="senha">Senha: 
+        <input type="password" name="senha" id="senha" placeholder="Escolha uma senha segura" required>
+      </label>
+      <br>
+      <label for="senha2">Confirme a senha: 
+        <input type="password" name="senha2" id="senha2" placeholder="Digite novamente sua senha">
+      </label>
+      <br>
+      <button type="submit">Cadastrar</button>
+      <button type="reset">Limpar dados</button>
+    </form>
+  </section>
+
+</body>
+</html>
+
+<!--
+  ACTION: para onde os dados serão mandados;
+  METHOD: qual o método vamos utilizar (POST(dados enviados por outro lugar + escondido) ou GET(os dados enviados a partir da url))
+
+  INPUT: TEXT(tipo texto)
+         BUTTON(para criar butão (SUBMIT:serve para submeter os dados do usuario))
+  TYPE: tipo de entrada de dados
+         PLACEHOLDER(texto dentro do input para direcionar a pessoa)
+         REQUIRED(campo obrigatório)
+         VALUE(deixa um campo preenchido value='gustavo')
+         CLASS e ID 
+         NAME(nome do campo que irá receber o valor)
+         LABEL(FOR(cria um vinculo entre a label(rotulo) e o campo de input em si. O valor de for='id' do input))
+         TEXTAREA(área de texto(COL(quantidade de colunas) e ROWS(quantidade de linhas)))
+         CHECKBOX(quadrados de escolha (VALUE, NAME(todos check tem que ter o mesmo nome), CHEKED(para o check ja começar selecionado)))
+         RADIO(bolinhas de escolha)
+-->
