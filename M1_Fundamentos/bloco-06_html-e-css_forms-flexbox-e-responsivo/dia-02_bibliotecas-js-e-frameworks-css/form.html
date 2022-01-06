@@ -39,45 +39,45 @@
       </label class="form-label">
       <br><br>
       <label class="form-label" for="estado">Estado: 
-        <select name="est" id="est" required>
+        <select name="est" id="est" class="form-select" required>
           <option value="escolha">Escolha</option select>
         </select>
       </label class="form-label">
       <br><br>
-      Residência:
-      <label class="form-label" for="casa">
-        <input class="form-control" type="radio" name="res" id="casa" checked> Casa
+      Residência: 
+      <label class="form-check-label" for="casa">
+        <input  type="radio" name="res" id="casa" class="form-check-input" checked> Casa
       </label class="form-label">  
-      <label class="form-label" for="apt">
-        <input type="radio" name="res" id="apt"> Apartamento
+      <label class="form-check-label" for="apt">
+        <input type="radio" name="res" id="apt" class="form-check-input"> Apartamento
       </label class="form-label">
-      <br>
+      <br><br>
     </fieldset>
-    <br>
+    <hr>
     <fieldset class="form2">
       <legend><strong>Dados Profissionais</strong></legend>
       <br>
       Resumo do currículo:
       <br>
-      <textarea name="txtarea" id="txtarea" cols="50" rows="3" maxlength="1000" placeholder="Faça aqui seu resumo com até 1000 caracteres." required></textarea>
-      <br><br>
+      <textarea name="txtarea" id="txtarea" cols="50" rows="3" maxlength="1000" placeholder="Faça aqui seu resumo com até 1000 caracteres." class="form-control" required></textarea>
+      <br>
       <label class="form-label" for="cargo">Cargo:
-        <input type="text" name="cargo" id="cargo" maxlength="40" required>
+        <input type="text" name="cargo" id="cargo" maxlength="40" class="form-control" required>
       </label class="form-label">
       <br><br>
       <label class="form-label" for="descCargo">Descrição do Cargo:
-        <input type="text" name="descCargo" id="descCargo" maxlength="500" required>
+        <input type="text" name="descCargo" id="descCargo" maxlength="500" class="form-control" required>
       </label class="form-label">
       <br><br>
       <label class="form-label" for="dtInicio">Data de Inicio: 
-        <input type="text" name="dtInicio" id="dtInicio" required>
+        <input type="text" name="dtInicio" id="dtInicio" class="form-control" required>
       </label class="form-label">
       
     </fieldset>
     <br>
     <div id="botao">
-      <button type="submit" id="btnEnvia">Enviar dados</button>
-      <button type="reset" id="btnLimpa">Limpar dados</button>
+      <button type="submit" id="btnEnvia" class="btn btn-primary">Enviar dados</button>
+      <button type="reset" id="btnLimpa" class="btn btn-primary">Limpar dados</button>
     </div>
     <div id="apagaDiv">
       <section id="dadosDoCv"></section>
