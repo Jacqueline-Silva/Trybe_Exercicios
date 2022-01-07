@@ -40,9 +40,6 @@ function dataDeInicio() {
 }
 btnEnvia.addEventListener('click', dataDeInicio);
 
-let form1 = document.querySelector('.form1');
-let form2 = document.querySelector('.form2');
-
 function desabilita(event) {
   event.preventDefault();
 }
@@ -121,3 +118,4 @@ function limpa() {
   div.remove();
 }
 btnLimpa.addEventListener('click', limpa);
+
