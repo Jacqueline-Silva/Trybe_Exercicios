@@ -1,6 +1,7 @@
 body {
   width: 85%;
   margin: 40px auto;
+  background-color: rgb(184, 205, 211);
 }
 h1, #botao {
   text-align: center;
