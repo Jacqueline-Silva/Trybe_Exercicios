@@ -1,5 +1,16 @@
+
+
 let selectEst = document.querySelector('#est');
-let dtInicio = document.querySelector('#dtInicio');
+//let dtInicio = document.querySelector('#dtInicio');
+let btnEnvia = document.querySelector('#btnEnvia');
+let btnLimpa = document.querySelector('#btnLimpa');
+let dadosDoCv = document.getElementById('dadosDoCv')
+
+/*import JustValidatePluginDate from 'just-validate-plugin-date';*/
+
+const validation = new JustValidate('#form' , {
+  errorFieldCssClass: 'is-invalid',
+});
 
 function criandoOptions() {
   let arrayEstados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
@@ -13,109 +24,128 @@ function criandoOptions() {
 }
 criandoOptions();
 
-let btnEnvia = document.querySelector('#btnEnvia');
-let btnLimpa = document.querySelector('#btnLimpa');
 
-function dataDeInicio() {
-  let dateValue = dtInicio.value.split('/');
-  let day = dateValue[0];
-  let month = dateValue[1];
-  let year = dateValue[2];
-  let today = new Date();
-  let todayYear = today.getFullYear();
+validation
+  .addField('#name', [
+    {
+      rule: 'required',
+      errorMessage: 'Por favor, insira seu nome.'
+    },
+    {
+      rule: 'maxLength',
+      value: 40,
+    },
+  ])
+  .addField('#email', [
+    {
+      rule: 'required',
+      errorMessage: 'Email necessário.',
+    },
+    {
+      rule: 'email',
+      errorMessage: 'Este email é inválido, por favor insira outro!',
+    },
+  ])
+  .addField('#cpf', [
+    {
+      rule: 'required',
+      errorMessage: 'Insira seu CPF.',
+    },
+    {
+      rule: 'maxLength',
+      value: 11,
+    },
+    {
+      rule: 'number',
+      errorMessage: 'Insira somente os números de seu CPF.',
+    },
+  ])
+  .addField('#end', [
+    {
+      rule: 'required',
+      errorMessage: 'Insira seu endereço.',
+    },
+    {
+      rule: 'maxLength',
+      value: 200,
+    },
+  ])
+  .addField('#cidade', [
+    {
+      rule: 'required',
+      errorMessage: 'Por favor, insira a cidade.',
+    },
+    {
+      rule: 'maxLength',
+      value: 28,
+    },
+  ])
+  .addField('#est', [
+    {
+      rule: 'required',
+      errorMessage: 'Defina o estado onde mora.',
+    },
+  ])
+  .addRequiredGroup('#residencia', [
+    {
+      rule: 'required',
+      errorMessage: 'Por favor, determine sua residência.',
+    },
+  ])
+  .addField('#txtarea', [
+    {
+      rule: 'required',
+      errorMessage: 'Insira um breve resumo do seu currículo.',
+    },
+    {
+      rule: 'maxLength',
+      value: 1000,
+    },
+  ])
+  .addField('#cargo', [
+    {
+      rule: 'required',
+      errorMessage: 'Por favor, indique o cargo exercido.',
+    },
+    {
+      rule: 'maxLength',
+      value: 40,
+    },
+  ])
+  .addField('#descCargo', [
+    {
+      rule: 'required',
+      errorMessage: 'Por favor, descreva brevemente o cargo.',
+    },
+    {
+      rule: 'maxLength',
+      value: 500,
+    },
+  ]) /*
+  .addField('#dtInicio', [
+    {
+      plugin: JustValidatePluginDate ( ( )  =>  ( { 
+        required: true,
+        format: 'dd/MM/aaaa', 
+      })), 
+      errorMessage: 'A data deve estar no formato dd MM aaaa (por exemplo, 20 dez 2021)', 
+    },
+  ])*/
+  .onSuccess((event) => {
+    event.preventDefault();
+    console.log('Validation passes and form submitted', event);
+  });
 
-  if(dtInicio.value !== `${day}/${month}/${year}`){
-    alert('Formato da data inválido! Insira uma data válida seguindo o padrão: dd/mm/aaaa');
-  }
+  /*
 
-  if(day <= 0 || day > 31) {
-    alert('Dia inválido. Corrija!');
-  }
-  if(month <= 0 || month > 12) {
-    alert('Mês inválido. Corrija!');
-  }
-  if(year < 0 || year > todayYear) {
-    alert('Ano inválido. Corrija!');
-  }
-}
-btnEnvia.addEventListener('click', dataDeInicio);
-
-function desabilita(event) {
-  event.preventDefault();
-}
-btnEnvia.addEventListener('click', desabilita);
-
-let nome = document.getElementById('name');
-  let email = document.getElementById('email');
-  let cpf = document.getElementById('cpf');
-  let endereco = document.getElementById('end');
-  let cidade = document.getElementById('cidade');
-  let estado = document.querySelector('#est');
+  function prevent(event) {
+    event.preventDefault();
+    
+  } btnEnvia.addEventListener('click', prevent);
   
-  let resumo = document.getElementById('txtarea');
-  let cargo = document.getElementById('cargo');
-  let dCargo = document.getElementById('descCargo')
-  let dadosDoCv = document.querySelector('#dadosDoCv')
-
-  let residencia = document.getElementsByName('res');
-  let apto = document.getElementById('apt');
-  let casa = document.getElementById('casa');
-
-
-function pegaInfo() {
+  function limpar() {
   
-  if(nome.value.length <= 40 && nome.value !== ''){
-    dadosDoCv.innerHTML = `<strong>Nome:</strong> ${nome.value} <br>`
-  }
+  } btnLimpa.addEventListener('click', limpar)
 
-  if(email.value.length <= 50 && email.value !== ''){
-    dadosDoCv.innerHTML += `<strong>Email:</strong> ${email.value}<br>`
-  }
-
-  if(cpf.value.length <= 11 && cpf.value !== ''){
-    dadosDoCv.innerHTML += `<strong>CPF:</strong> ${cpf.value} <br>`
-  }
-
-  if(endereco.value.length <= 200 && endereco.value !== ''){
-    dadosDoCv.innerHTML += `<strong>Endereço:</strong> ${endereco.value}<br>`
-  }
-
-  if(cidade.value.length <= 28 && cidade.value !== ''){
-    dadosDoCv.innerHTML += `<strong>Cidade:</strong> ${cidade.value}<br>`
-  }
-
-  if(estado.value !== ''){
-    dadosDoCv.innerHTML += `<strong>Estado:</strong> ${estado.value}<br>`
-  }
-
-  if(casa.checked === true){
-    dadosDoCv.innerHTML += `<strong>Residência:</strong> Casa <br>`
-  } else if (apto.checked === true){
-    dadosDoCv.innerHTML += `<strong>Residência:</strong> Apartamento <br>`
-  }
-
-  if(resumo.value.length <= 1000 && resumo.value !== ''){
-    dadosDoCv.innerHTML += `<strong>Resumo do currículo:</strong> ${resumo.value}<br>`
-  }
-
-  if(cargo.value.length <= 40 && cargo.value !== ''){
-    dadosDoCv.innerHTML += `<strong>Cargo:</strong> ${cargo.value}<br>`
-  }
-
-  if(dCargo.value.length <= 200 && dCargo.value !== ''){
-    dadosDoCv.innerHTML += `<strong>Descrição do cargo:</strong> ${dCargo.value}<br>`
-  }
-
-  if(dtInicio.value.length !== 0){
-    dataDeInicio()
-    dadosDoCv.innerHTML += `<strong>Data de Inicio:</strong> ${dtInicio.value} <br>`
-  }
-}
-btnEnvia.addEventListener('click', pegaInfo);
-
-function limpa() {
-  let div = document.querySelector('#apagaDiv');
-  div.remove();
-}
-btnLimpa.addEventListener('click', limpa);
-
+  */
+  
