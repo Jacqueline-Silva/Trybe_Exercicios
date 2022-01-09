@@ -5,3 +5,10 @@ body {
 h1, #botao {
   text-align: center;
 }
+
+hr {
+  width: 50%;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}

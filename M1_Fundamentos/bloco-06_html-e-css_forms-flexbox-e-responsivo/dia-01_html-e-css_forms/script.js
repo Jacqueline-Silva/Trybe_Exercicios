@@ -54,12 +54,14 @@ let nome = document.getElementById('name');
   let endereco = document.getElementById('end');
   let cidade = document.getElementById('cidade');
   let estado = document.querySelector('#est');
-  let residencia = document.getElementsByName('res');
   let resumo = document.getElementById('txtarea');
   let cargo = document.getElementById('cargo');
   let dCargo = document.getElementById('descCargo')
   let dadosDoCv = document.querySelector('#dadosDoCv')
-
+  
+  let residencia = document.getElementsByName('res');
+  let casa = document.getElementById('casa');
+  let apto = document.getElementById('apt')
 
 
 function pegaInfo() {
@@ -82,8 +84,11 @@ function pegaInfo() {
   if(estado.value !== ''){
     dadosDoCv.innerHTML += `<strong>Estado:</strong> ${estado.value}<br>`
   }
-  if(residencia.value !== ''){
-    dadosDoCv.innerHTML += `<strong>Residência:</strong> ${residencia.value}<br>`
+  if(apto.checked === true){
+    dadosDoCv.innerHTML += `<strong>Residência:</strong> Apartamento<br>`
+  }
+  if(casa.checked === true){
+    dadosDoCv.innerHTML += `<strong>Residência:</strong> Casa <br>`
   }
   if(resumo.value.length <= 1000 && resumo.value !== ''){
     dadosDoCv.innerHTML += `<strong>Resumo do currículo:</strong> ${resumo.value}<br>`
