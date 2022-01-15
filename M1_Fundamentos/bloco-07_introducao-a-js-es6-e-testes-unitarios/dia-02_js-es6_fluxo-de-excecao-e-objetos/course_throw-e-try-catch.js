@@ -78,6 +78,18 @@ customer['secondName'] = 'Silva';
 console.log(customer);
 
 // Exercício
+
+let objeto = {
+  nascimento: 1996,
+};
+let chave = 'mes';
+let valor = 'Agosto';
+
+// objeto[chave] = valor;
+// console.log(objeto)
+
 const novo = (par1, par2, par3) => {
-  
+ let seila = par1[par2] = par3
 }
+console.log(novo (objeto, 'mes', 'agosto'))
+
