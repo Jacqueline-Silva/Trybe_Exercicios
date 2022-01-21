@@ -14,12 +14,12 @@ const newEmployees = (call) => {
   }
   return employees;
 };
-console.log(newEmployees(emails));
+//console.log(newEmployees(emails));
 
 
 // EXERCÍCIO 2 =====================================================
 
-const random = (chute, callback) => {
+/* const random = (chute, callback) => {
   let aleatorio = Math.floor(Math.random() * (6 - 1) + 1);
   return callback(chute, aleatorio) = (chute, aleatorio) => {
     chute === aleatorio ? 'Parabéns você ganhou' : 'Tente novamente'
@@ -30,18 +30,20 @@ const loteria = (aleatorio, chute) => {
   return aleatorio(random()) === chute 
 };
 console.log(loteria(random, 5));
+ */
 
-/* 
-ANTERIOR SEM CALLBAK
+
 const random = () => {
   let aleatorio = Math.floor(Math.random() * (6 - 1) + 1);
   return aleatorio;
 }
 const loteria = (aleatorio, chute) => {
-  return random(aleatorio) === chute ? 'Parabéns você ganhou' : 'Tente novamente'
+  console.log (`Nº aleatório: ${aleatorio}, Seu nº: ${chute}`)
+  return aleatorio === chute ? 'Parabéns você ganhou' : 'Tente novamente'
+ 
 }
-console.log(loteria(random, 5));
-*/
+console.log(loteria(random(), 5));
+
 
 // EXERCÍCIO 3 ====================================================
 /* 
