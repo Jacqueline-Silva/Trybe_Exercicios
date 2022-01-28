@@ -14,47 +14,47 @@ const newEmployees = (call) => {
   }
   return employees;
 };
-//console.log(newEmployees(emails));
+console.log(newEmployees(emails));
 
 
 // EXERCÍCIO 2 =====================================================
-
-/* const random = (chute, callback) => {
-  let aleatorio = Math.floor(Math.random() * (6 - 1) + 1);
-  return callback(chute, aleatorio) = (chute, aleatorio) => {
-    chute === aleatorio ? 'Parabéns você ganhou' : 'Tente novamente'
-  }
-}
-
-const loteria = (aleatorio, chute) => {
-  return aleatorio(random()) === chute 
-};
-console.log(loteria(random, 5));
- */
-
 
 const random = () => {
   let aleatorio = Math.floor(Math.random() * (6 - 1) + 1);
   return aleatorio;
 }
+
 const loteria = (aleatorio, chute) => {
   console.log (`Nº aleatório: ${aleatorio}, Seu nº: ${chute}`)
-  return aleatorio === chute ? 'Parabéns você ganhou' : 'Tente novamente'
- 
+  return aleatorio === chute ? 'Parabéns você ganhou!' : 'Tente novamente'
 }
+
 console.log(loteria(random(), 5));
 
 
 // EXERCÍCIO 3 ====================================================
-/* 
-const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 
+const RIGHT_ANSWERS =    ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
-const compara = (arrayCorreto, arrayRespostas) => {
-  RIGHT_ANSWERS.forEach(arrayCorreto) === STUDENT_ANSWERS.forEach(arrayRespostas)
+const compare = (rightA, studentA) => {
+  if (rightA === studentA) {
+    return 1
+  }
+  if (studentA === 'N.A') {
+    return 0
+  }
+  return -0.5
 }
 
-const comparaRespostas = (arrayCorreto, arrayRespostas, verificaEsoma) => {
-  //
-} */
+const comparaRespostas = (rightAnswers, studentAnswers, verifyAndSum) => {
+  let count = 0;
+  
+  let verify = verifyAndSum(rightAnswers.forEach((e1) => [e1]), studentAnswers.forEach((e2) => [e2]))
+    count += verify
+
+
+  return count
+};
+
+console.log(comparaRespostas(RIGHT_ANSWERS, STUDENT_ANSWERS, compare));
