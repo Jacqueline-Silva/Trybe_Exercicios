@@ -32,10 +32,19 @@ function getPokemonDetails(filter, callback) {
   }, 2000);
 }
 /* 
-getPokemonDetails((e) => e.name === 'Squirtle', (error, message) => {
+getPokemonDetails((e) => e.name === 'Bulbasaur', (error, message) => {
   error ? console.log(error) : console.log(message); 
 })
+
+
+const pokeSquirt =  'Olá, seu pokémon é o Squirtle, o tipo dele é Water e a habilidade principal dele é Water Gun';
+
+const pokeCharmander = 'Olá, seu pokémon é o Charmander, o tipo dele é Fire e a habilidade principal dele é Ember';
+
+const pokeBulbasaur = 'Olá, seu pokémon é o Bulbasaur, o tipo dele é Grass e a habilidade principal dele é Razor Leaf';
  */
+
+
 module.exports = {
   getPokemonDetails,
 };
