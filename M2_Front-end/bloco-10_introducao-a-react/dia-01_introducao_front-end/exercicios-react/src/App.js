@@ -13,7 +13,6 @@ const Task = (value) => {
   )
 }
 
-
 function App() {
   return (<Task/>);
 }
