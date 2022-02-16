@@ -5,20 +5,20 @@
 
 - [X] Bloco 01 - _Unix e Bash_
 
-- [ ] Bloco 02 - _Git, GitHub e Internet_
+- [X] Bloco 02 - _Git, GitHub e Internet_
 
-- [ ] Bloco 03 - _Introdução a HTML e CSS_
+- [X] Bloco 03 - _Introdução a HTML e CSS_
 
-- [ ] Bloco 04 - _Introdução à JavaScript e Lógica de Programação_
+- [X] Bloco 04 - _Introdução à JavaScript e Lógica de Programação_
 
-- [ ] Bloco 05 - _JavaScript: DOM, Eventos e Web Storage_
+- [X] Bloco 05 - _JavaScript: DOM, Eventos e Web Storage_
 
-- [ ] Bloco 06 - _HTML e CSS: Forms, Flexbox e Responsivo_
+- [X] Bloco 06 - _HTML e CSS: Forms, Flexbox e Responsivo_
 
-- [ ] Bloco 07 - _Introdução à JavaScript e Testes Unitários_
+- [X] Bloco 07 - _Introdução à JavaScript e Testes Unitários_
 
-- [ ] Bloco 08 - _Higher Order Functions do JavaScript_
+- [X] Bloco 08 - _Higher Order Functions do JavaScript_
 
-- [ ] Bloco 09 - _JavaScript e Teste Assíncronos_
+- [X] Bloco 09 - _JavaScript e Teste Assíncronos_
 
 
