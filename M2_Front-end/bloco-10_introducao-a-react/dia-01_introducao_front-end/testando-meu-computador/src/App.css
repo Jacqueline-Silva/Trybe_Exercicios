@@ -1,0 +1,18 @@
+.HelloWorld {
+  color: brown;
+  text-align: center;
+  font-size: 3rem;
+}
+
+body {
+  text-align: center;
+}
+
+.MyDesc {
+  color: red;
+  font-size: 4rem;
+}
+
+.MyDescP {
+  font-size: 2rem;
+}
