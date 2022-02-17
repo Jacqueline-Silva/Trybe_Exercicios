@@ -1,0 +1,53 @@
+div {
+    transition: 2s;
+}
+
+div:hover {
+    border-style: solid;
+}
+
+div:nth-of-type(1) {
+    background: chartreuse;
+}
+
+div:nth-of-type(2) {
+    background: chocolate;
+}
+
+div:nth-of-type(3) {
+    background: cyan;
+    height: 80px;
+}
+
+div:nth-of-type(4) {
+    background: pink;
+}
+
+div:nth-of-type(5) {
+    background: yellow;
+}
+
+div:nth-of-type(1) > h3 {
+    color: aliceblue;
+}
+
+div:nth-of-type(2) > h3 {
+    border: solid black;
+}
+
+div:nth-of-type(3) > h3 {
+    font-family: fantasy, sans-serif;
+}
+
+div:nth-of-type(4) > h3 {
+    text-decoration: underline royalblue;
+}
+
+div:nth-of-type(5) > h3 {
+    border: dotted gray;
+}
+
+div:nth-of-type(odd) {
+    font-style: italic;
+}
+
