@@ -21,6 +21,7 @@ code {
 
 .divPai p {
   font-size: 4rem;
+  text-shadow: 1px 1px 3px grey;
 }
 
 .btn {
@@ -28,6 +29,7 @@ code {
   margin: 10px;
   padding: 5px;
   width: 150px;
+  box-shadow: 1px 1px 3px grey;
 }
 
 .left {
@@ -40,4 +42,9 @@ code {
 
 .right {
   background-color: rgba(243, 247, 6, 0.568);
+}
+
+.reset {
+  background-color: rgba(255, 0, 0, 0.377);
+  width: 50%;
 }
