@@ -18,13 +18,20 @@ class App extends React.Component {
     this.reset = this.reset.bind(this);
   }
 
+  
   left() {
+    console.log(this.state.clickLeft)
+
     this.setState((numAnterior, _props) => ({
       clickLeft: numAnterior.clickLeft + 1
     }))
-    console.log('Clicou no botão da esquerda');
-  }
 
+    console.log('Clicou no botão da esquerda');
+
+    if(this.state.clickLeft % 2 === 0) {
+      console.log('PAR!')
+    }
+  }
 
   right() {
     this.setState((numAnterior, _props) => ({
@@ -32,7 +39,6 @@ class App extends React.Component {
     }))
     console.log('Clicou no botão da direita');
   }
-
 
   center() {
     this.setState((numAnterior, _props) => ({
@@ -53,17 +59,17 @@ class App extends React.Component {
     return (
       <>
         <div className='divPai'>
-          <div>
+          <div className='left'>
             <p>{this.state.clickLeft}</p>
-            <button className='btn left' onClick={this.left}>Esquerda</button>
+            <button className='btn' onClick={this.left}>Esquerda</button>
           </div>
-          <div>
+          <div className='center'>
             <p>{this.state.clickCenter}</p>
-            <button className='btn center' onClick={this.center}>Principal</button>
+            <button className='btn' onClick={this.center}>Principal</button>
           </div>
-          <div>
+          <div className='right'>
             <p>{this.state.clickRight}</p>
-            <button className='btn right' onClick={this.right}>Direita</button>
+            <button className='btn' onClick={this.right}>Direita</button>
           </div>
         </div>
         <div>
