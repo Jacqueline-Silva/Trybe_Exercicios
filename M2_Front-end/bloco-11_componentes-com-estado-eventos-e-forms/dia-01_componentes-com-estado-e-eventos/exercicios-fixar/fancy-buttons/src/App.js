@@ -20,17 +20,11 @@ class App extends React.Component {
 
   
   left() {
-    console.log(this.state.clickLeft)
-
     this.setState((numAnterior, _props) => ({
       clickLeft: numAnterior.clickLeft + 1
     }))
 
     console.log('Clicou no botão da esquerda');
-
-    if(this.state.clickLeft % 2 === 0) {
-      console.log('PAR!')
-    }
   }
 
   right() {
@@ -55,22 +49,47 @@ class App extends React.Component {
     }))
   }
 
-  render() { 
+  render() {  
     return (
       <>
-        <div className='divPai'>
-          <div className='left'>
-            <p>{this.state.clickLeft}</p>
+        <div className='divParent'>
+
+          <div className={this.state.clickLeft % 2 === 0 
+              ? "divParent_btn--green" 
+              : ""}>
+            <p className='divParent-p__even'>
+              {this.state.clickLeft % 2 === 0 ? "Par!" : "Ímpar"}
+            </p>
+            <p className='divParent__p--font'>
+              {this.state.clickLeft}
+            </p>
             <button className='btn' onClick={this.left}>Esquerda</button>
           </div>
-          <div className='center'>
-            <p>{this.state.clickCenter}</p>
+
+          <div className={this.state.clickCenter % 2 === 0 
+              ? "divParent_btn--green" 
+              : ""}>
+            <p className='divParent-p__even'>
+              {this.state.clickCenter % 2 === 0 ? "Par!" : "Ímpar"}
+            </p>
+            <p className='divParent__p--font'>
+              {this.state.clickCenter}
+            </p>
             <button className='btn' onClick={this.center}>Principal</button>
           </div>
-          <div className='right'>
-            <p>{this.state.clickRight}</p>
+
+          <div className={this.state.clickRight % 2 === 0 
+              ? "divParent_btn--green" 
+              : ""}>
+            <p className='divParent-p__even'>
+              {this.state.clickRight % 2 === 0 ? "Par!" : "Ímpar"}
+            </p>
+            <p className='divParent__p--font'>
+              {this.state.clickRight}
+            </p>
             <button className='btn' onClick={this.right}>Direita</button>
           </div>
+
         </div>
         <div>
           <button className='btn reset' onClick={this.reset}>Resetar Cliques</button>
