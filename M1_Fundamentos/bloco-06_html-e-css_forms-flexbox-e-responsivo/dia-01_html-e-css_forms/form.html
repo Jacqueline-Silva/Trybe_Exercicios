@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Currículo</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header>
+    <h1>Formulário de Currículo</h1>
+  </header>
+  <form action="" method="get" >
+    <fieldset class="form1">
+      <legend><strong>Dados Pessoais</strong></legend>
+      <br>
+      <label for="name">Nome: 
+        <input type="text" name="name" id="name" maxlength="40" required>
+      </label>
+      <br><br>
+      <label for="email">Email:
+        <input type="email" name="email" id="email" maxlength="50" required>
+      </label>
+      <br><br>
+      <label for="cpf">CPF: 
+        <input type="text" name="cpf" id="cpf" maxlength="11" required>
+      </label>
+      <br><br>
+      <label for="end">Endereço: 
+        <input type="text" name="end" id="end" maxlength="200" required>
+      </label>
+      <br><br>
+      <label for="cidade">Cidade: 
+        <input type="text" name="cidade" id="cidade" maxlength="28" required>
+      </label>
+      <br><br>
+      <label for="estado">Estado: 
+        <select name="est" id="est" required>
+          <option value="escolha">Escolha</option select>
+        </select>
+      </label>
+      <br><br>
+      Residência:
+      <label for="casa">
+        <input type="radio" name="res" id="casa" checked> Casa
+      </label>  
+      <label for="apt">
+        <input type="radio" name="res" id="apt"> Apartamento
+      </label>
+      <br>
+    </fieldset>
+    <br>
+    <fieldset class="form2">
+      <legend><strong>Dados Profissionais</strong></legend>
+      <br>
+      Resumo do currículo:
+      <br>
+      <textarea name="txtarea" id="txtarea" cols="50" rows="3" maxlength="1000" placeholder="Faça aqui seu resumo com até 1000 caracteres." required></textarea>
+      <br><br>
+      <label for="cargo">Cargo:
+        <input type="text" name="cargo" id="cargo" maxlength="40" required>
+      </label>
+      <br><br>
+      <label for="descCargo">Descrição do Cargo:
+        <input type="text" name="descCargo" id="descCargo" maxlength="500" required>
+      </label>
+      <br><br>
+      <label for="dtInicio">Data de Inicio: 
+        <input type="text" name="dtInicio" id="dtInicio" required>
+      </label>
+      
+    </fieldset>
+    <br>
+    <div>
+      <button type="submit" id="btnEnvia">Enviar dados</button>
+      <button type="reset" id="btnLimpa">Limpar dados</button>
+    </div>
+    <div id="apagaDiv">
+      <section id="dadosDoCv"></section>
+      <section id="dadosErrados"></section>
+    </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>

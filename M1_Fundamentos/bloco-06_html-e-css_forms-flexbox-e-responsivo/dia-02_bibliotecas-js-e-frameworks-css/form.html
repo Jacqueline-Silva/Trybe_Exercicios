@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Currículo</title>
+
+  <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"> </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  
+</head>
+<body>
+  <header>
+    <h1>Formulário de Currículo</h1>
+  </header>
+  <hr>
+  <form action="" method="get" class="row g-3" id="form">
+    <h3>Dados Pessoais</h3>
+    <div class="col-md-6">
+      <label class="form-label" for="name">Nome: </label>
+      <input class="form-control" type="text" name="name" id="name" maxlength="40" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="cpf">CPF: </label>
+      <input class="form-control" type="text" name="cpf" id="cpf" maxlength="11" required>
+    </div>
+    <div  class="col-12">
+      <label class="form-label" for="email">Email:</label>
+      <input class="form-control" type="email" name="email" id="email" maxlength="50" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="end">Endereço:</label> 
+      <input class="form-control" type="text" name="end" id="end" maxlength="200" required>
+    </div>
+    <div class="col-md-4">
+      <label class="form-label" for="cidade">Cidade: </label>
+      <input class="form-control" type="text" name="cidade" id="cidade" maxlength="28" required>
+    </div>
+    <div class="col-md-2">
+      <label class="form-label" for="estado">Estado: </label>
+      <select name="est" id="est" class="form-select" required>
+        <option value="escolha">Escolha</option>
+      </select>
+      <br><br>
+    </div>
+    <fieldset class="row mb-3">
+      <legend class="col-form-label col-sm-2 pt-0">Residência:</legend>
+      <br> 
+      <div class="col-sm-10" id="residencia">
+        <div class="form-check">
+          <label class="form-check-label" for="casa"></label> 
+          <input  type="radio" name="res" id="casa" class="form-check-input"> Casa
+        </div>
+        <div class="form-check">
+          <label class="form-check-label" for="apt"></label>
+          <input type="radio" name="res" id="apt" class="form-check-input"> Apartamento
+        </div>
+      </div>
+    </fieldset>
+    <hr>
+    <h3>Dados Profissionais</h3>
+    <br>
+    <div class="mb-3">
+      <label for="txtarea" class="form-label">Resumo do currículo:</label>
+      <textarea name="txtarea" id="txtarea" cols="50" rows="3" maxlength="1000" placeholder="Faça aqui seu resumo com até 1000 caracteres." class="form-control" required></textarea>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="cargo">Cargo:</label>
+      <input type="text" name="cargo" id="cargo" maxlength="40" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="dtInicio">Data de Inicio:</label> 
+      <input type="text" name="dtInicio" id="dtInicio" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="descCargo">Descrição do Cargo:</label>
+      <input type="text" name="descCargo" id="descCargo" maxlength="500" class="form-control" required>
+    </div>
+    <div id="botao">
+      <button type="submit" id="btnEnvia" class="btn btn-outline-success">Enviar dados</button>
+      <button type="reset" id="btnLimpa" class="btn btn-outline-danger">Limpar dados</button>
+    </div>
+    <div id="apagaDiv">
+      <section id="dadosDoCv"></section>
+      <section id="dadosErrados"></section>
+    </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
