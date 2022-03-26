@@ -22,9 +22,9 @@
       <p>Cidade: <span id="cidade-2">São Paulo</span></p>
     </div>
     <script>
-      //import { combineReducers } from 'redux';
+      // import { combineReducers } from 'redux';
 
-      // Constantes 
+      // Constantes fixas
       const fullname1 = 'FULLNAME1';
       const fullname2 = 'FULLNAME2';
      
@@ -83,13 +83,11 @@
       // Subscribe
       store.subscribe(() => {
       const { meuPrimeiroReducer, meuSegundoReducer } = store.getState();
-  
 
       const nome1 = document.getElementById('nome-1');
       const sobrenome1 = document.getElementById('sobrenome-1');
       const nome2 = document.getElementById('nome-2');
       const sobrenome2 = document.getElementById('sobrenome-2');
-
 
       nome1.innerHTML = meuPrimeiroReducer.nome;
       sobrenome1.innerHTML = meuPrimeiroReducer.sobrenome;
@@ -98,20 +96,23 @@
     });
 
       // Actions
+      const replaceFullname1 = { 
+        type: fullname1,
+        nome: 'Cosma',
+        sobrenome: 'Santos',
+      };
+      const replaceFullname2 = { 
+        type: fullname2,
+        nome: 'José',
+        sobrenome: 'Xavier',
+      };
+       
       window.onload = () => {
         // alert('teste')
 
         setTimeout(() => {
-          store.dispatch({
-            type: fullname1,
-            nome: 'Cosma',
-            sobrenome: 'Santos',
-          });
-          store.dispatch({
-            type: fullname2,
-            nome: 'José',
-            sobrenome: 'Xavier',
-          });
+          store.dispatch( replaceFullname1 );
+          store.dispatch( replaceFullname2 );
         }, 3000);
       };
       
