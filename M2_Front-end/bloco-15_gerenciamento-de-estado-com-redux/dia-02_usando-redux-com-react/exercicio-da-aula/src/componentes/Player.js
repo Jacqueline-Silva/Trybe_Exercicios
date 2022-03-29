@@ -1,12 +1,18 @@
 import React from 'react'
+import { connect } from 'react-redux';
 
-const Player = () => {
+const Player = ({ selectedCategory, selectedMovie }) => {
   return (
     <div>
-      <h2>Nome da categoria</h2>
-      <h3> Selecionado </h3>
+      <h2>{selectedCategory.name}</h2>
+      <h3>{selectedMovie.title}</h3>
     </div>
   )
 }
 
-export default Player;
+const mapStateToProps = (store) => ({
+  selectedCategory: store.movieReducer.selectedCategory,
+  selectedMovie: store.movieReducer.selectedMovie,
+});
+
+export default connect(mapStateToProps, null)(Player);

@@ -1,4 +1,5 @@
 import { categories } from "../../data";
+import { SELECTED_MOVIE } from "../actions/actionTypes";
 
 const initialState = {
   categories: [...categories],
@@ -8,9 +9,11 @@ const initialState = {
 
 const movieReducer = (state = initialState, action) => {
   switch (action.type) {
-  case 'first':
+  case SELECTED_MOVIE:
     return {
       ...state,
+      selectedMovie: action.movie,
+      selectedCategory: action.category,
     }
 
   default:
