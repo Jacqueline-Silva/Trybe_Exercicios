@@ -1,10 +1,10 @@
 # B19 - DOCKER: UTILIZANDO CONTAINERS
-
+#
 ### Neste bloco:
 
 - [X] Dia 01 - _Introdução à Back-end e Comandos básicos_
 
-- [ ] Dia 02 - _Manipulação e Criação de Imagens no Docker_
+- [X] Dia 02 - _Manipulação e Criação de Imagens no Docker_
 
 - [ ] Dia 03 - _Orquestrando Containers com Docker Compose_
 
