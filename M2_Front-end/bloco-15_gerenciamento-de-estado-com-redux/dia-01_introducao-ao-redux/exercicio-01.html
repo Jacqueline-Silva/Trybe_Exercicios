@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <title>Redux - Exercicio 01</title>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        height: 50px;
+        width: 200px;
+      }
+
+      #font {
+        color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p id="font">Color: <span id="value">white</span></p>
+      <button id="previous">Previous color</button>
+      <button id="next">Next color</button>
+    </div>
+    
+    <script>
+    
+   // Importação
+    // const Redux = require('redux');
+
+   // Constantes
+    const nextColor = 'NEXT_COLOR';
+    const prevColor = 'PREVIOUS_COLOR';
+
+    // ACTIONS
+    const next = () => store.dispatch({ type: nextColor });
+    const prev = () => store.dispatch({ type: prevColor });
+
+    // Reducer
+    const ESTADO_INICIAL = {
+      colors: ['white', '#536A95', 'red', 'green', 'blue', 'yellow'],
+      index: 0,
+    };
+
+    const reducer = (state = ESTADO_INICIAL, action) => {
+      switch (action.type) {
+        case nextColor:
+          return {
+            ...state,
+            index: state.index === state.colors.length - 1 ? 0 : state.index + 1,
+          };
+        case prevColor:
+          return {
+            ...state,
+            index: state.index === state.colors.length - 1 ? 0 : state.index - 1,
+          };
+        default:
+          return state;
+        };
+    };
+        
+    // Store
+    const store = Redux.createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+    // Subscribe
+    store.subscribe(() => {
+      const { colors, index } = store.getState();
+      const color = document.getElementById('value');
+      color.innerHTML = colors[index];
+      window.document.body.style.backgroundColor = colors[index];
+      console.log(colors, index)
+    });
+
+    // Listeners
+    const btnNext = document.getElementById('next');
+    const btnPrev = document.getElementById('previous');
+
+    btnNext.addEventListener('click', next);
+    btnPrev.addEventListener('click', prev);
+   </script>
+
+  </body>
+</html>
+
