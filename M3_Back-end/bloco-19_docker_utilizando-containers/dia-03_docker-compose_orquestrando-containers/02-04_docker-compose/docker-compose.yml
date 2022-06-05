@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  ghost:
+    image: ghost:1-alpine
+    ports:
+      - 2368:2368
+    depends_on:
+      - db_ghost
+    environment:
+      - database__client=mysql
+      - database__connection__database=ghost
+      - database__connection__host=db_ghost
+      - database__connection__user=root
+      - database__connection__password=password
+  db_ghost:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+
+# https://ghost.org/docs/config/
