@@ -5,10 +5,11 @@ const POSITIVO = 'positivo';
 const NEGATIVO = 'negativo';
 const NEUTRO = 'neutro';
 const TYPE = 'string';
+const MSG_ERR = 'não é um número'
 
 describe('Ao executar a função', () => {
 
-  describe('o resultado', () => {
+  describe('e passar um número, o resultado', () => {
     it('é uma string', () => {
       const retornoFuncao = verificaNumero(45);
       expect(retornoFuncao).to.be.a(TYPE);
@@ -28,4 +29,17 @@ describe('Ao executar a função', () => {
       expect(retornoFuncao).to.be.equals(NEUTRO);
     });
   });
+
+  describe('e não passar um número, a resposta', () => {
+    it('é uma string', () => {
+      const retornoFuncao = verificaNumero('terceiro exercicio');
+      expect(retornoFuncao).to.be.a(TYPE);
+    });
+    it('é uma mensagem de erro', () => {
+      const retornoFuncao = verificaNumero('terceiro exercicio');
+      expect(retornoFuncao).to.include(MSG_ERR);
+    });
+  });
 });
+
+// REF: https://www.chaijs.com/api/bdd/
