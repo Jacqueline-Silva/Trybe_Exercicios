@@ -1,8 +1,9 @@
-const regex = /\S+@\S+.com/;
+const regex = /\S+@\S+\.com/;
 const ERR = 401;
 
 function validateRegister(request, response, next) {
  const { username, email, password } = request.body;
+ const pass = password.toString()
 
  if (username.length <= 3) {
   return response.status(ERR).json({ message: 'invalid data' });
@@ -12,7 +13,7 @@ function validateRegister(request, response, next) {
   return response.status(ERR).json({ message: 'invalid data' });
  }
 
- if (password.length < 4 || password.length > 8) {
+ if (pass.length < 4 || pass.length > 8) {
   return response.status(ERR).json({ message: 'invalid data' });
  }
 
