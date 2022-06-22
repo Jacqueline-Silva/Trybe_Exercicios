@@ -3,7 +3,7 @@ const moment = require('moment');
 const valida1a3 = /[1-3]/;
 const ERR_400 = 400;
 
-function validateBody(request, response, next) {
+function validateSales(request, response, next) {
   const { productName, infos } = request.body;
 
   if (!productName || productName.length < 4) {
@@ -30,9 +30,9 @@ function validateBody(request, response, next) {
   }
 
   next();
-}
+};
 
-module.exports = validateBody;
+module.exports = validateSales;
 
 /**
  * REFERENCIAS: 
