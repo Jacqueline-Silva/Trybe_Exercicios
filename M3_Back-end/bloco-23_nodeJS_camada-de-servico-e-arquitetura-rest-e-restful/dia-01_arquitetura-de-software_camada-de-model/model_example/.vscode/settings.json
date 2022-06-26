@@ -1,0 +1,10 @@
+{
+  // quando colar, formata
+  "editor.formatOnPaste": true,
+  // quando salvar, formata
+  "editor.formatOnSave": true,
+  // quando escrever, formata
+  "editor.formatOnType": true,
+  
+  
+}
