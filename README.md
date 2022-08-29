@@ -7,79 +7,89 @@ _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vi
 O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.
 
 --------------------------------------------------------
-## Fundamentos do Desenvolvimento Web :white_check_mark:
+## Fundamentos do Desenvolvimento Web :heavy_check_mark:
 
-##### Bloco 1: Introdução - Unix & Shell
+- [X] Bloco 1: _Introdução - Unix & Shell_
 
-- [X] 1-3: _Unix & Shell- Part 1_
-- [X] 1-4: _Unix & Shell- Part 2_
+- [X] Bloco 2: _Git & GitHub_
 
-##### Bloco 2: Git & GitHub
+- [X] Bloco 3: _Introdução - HTML & CSS_
 
-- [X] 2-1: _O que é e para que serve?_
-- [X] 2-2: _Entendendo os comandos_
-- [X] 2-3: _Internet - Entendendo como ela funciona_
+- [X] Bloco 4: _Introdução à JavaScript e Lógica de Programação_
 
-##### Bloco 3: Introdução - HTML & CSS
+- [X] Bloco 5: _Introdução - JavaScript - Projetos_
 
-- [X] 3-1: _HTML & CSS - Introdução e Estruturas de página_
-- [X] 3-2: _HTML & CSS - Primeiros passos em CSS_
-- [X] 3-3: _HTML & CSS - Seletores e posicionamento_
-- [X] 3-4: _HTML Semântico_
-- [X] 3-5: _[Projeto - Lessons Learned - HTML & CSS]()_
+- [X] Bloco 6: _HTML & CSS: Forms, Flexbox e Responsivo_
 
-##### Bloco 4: Introdução à JavaScript e Lógica de Programação
+- [X] Bloco 7: _JavaScript ES6 e Testes Unitários_
 
-- [X] 4-1: _JavaScript - Introdução e Primeiros passos_
-- [X] 4-2: _JavaScript - Array e loop For_
-- [X] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
-- [X] 4-4: _JavaScript - Objetos e funções_
-- [X] 4-5: _[Projeto - Playground Functions]()_
+- [X] Bloco 8: _Higher Order Functions do JavaScript ES6_
 
-##### Bloco 5: Introdução - JavaScript - Projetos
 
-- [X] 5-1: _JavaScript - DOM e seletores_
-- [X] 5-2: _JavaScript - Trabalhando com elementos_
-- [X] 5-3: _JavaScript - Eventos_
-- [X] 5-4: _JavaScript - Web Storage_
-- [X] 5-5: _JavaScritp - Fundamentos e Projetos
-- [X] 5-5: _[Projeto - Meme Generator]()_
-- [X] 5-6: _[Projeto - Arte com Pixels]()_
-- [X] 5-7: _[Projeto - Lista de tarefas]()_
-- [X] 5-7: _[Projeto - Adivinhe a Cor]()_
-- [X] 5-7: _[Projeto - Carta Misteriosa]()_
+## Desenvolvimento Front-end :heavy_check_mark:
 
-##### Bloco 6: HTML & CSS: Forms, Flexbox e Responsivo
+- [X] Bloco 9: _JavaScript e Testes Assíncronos_
 
-- [X] 6-1: _HTML & CSS - Forms_
-- [X] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
-- [X] 6-3: _CSS Flexbox - Part 1_
-- [X] 6-4: _CSS Flexbox - Part 2_
-- [X] 6-5: _CSS Responsivo - Mobile First_
-- [X] 6-6: _[Projeto - Trybewarts]()_
+- [X] Bloco 10: _Introdução à React_
 
-##### Bloco 7: JavaScript ES6 e Testes Unitários
+- [X] Bloco 11: _Componentes com Estado, Eventos e Formulários com React_
 
-- [X] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
-- [X] 7-2: _JavaScript ES6 - Objects_
-- [X] 7-3: _Testes unitários em JavaScript_
-- [X] 7-4: _[Projeto - JavaScript Testes Unitários]()_
+- [X] Bloco 12: _Ciclo de Vida de Componentes e React Router_
 
-##### Bloco 8: Higher Order Functions do JavaScript ES6
+- [X] Bloco 13: _Metodologias Ágeis_
 
-- [X] 8-1: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
-- [X] 8-2: _JavaScript ES6 - Higher Order Functions - map e filter_
-- [X] 8-3: _JavaScript ES6 - Higher Order Functions - reduce_
-- [X] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
-- [X] 8-5: _[Projeto - Zoo functions]()_
+- [X] Bloco 14: _Testes automatizados com React Testing Library_
 
-##### Bloco 9: JavaScript e Testes Assíncronos
+- [X] Bloco 15: _Gerenciamento de estado com Redux_
 
-- [X] 9-1: _JavaScript Assíncrono e Callbacks_
-- [X] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
-- [X] 9-2: _Jest - Teste Assíncronos_
-- [X] 9-3: _[Projeto - Carrinho de Compras]()_
+- [X] Bloco 16: _Projeto Trivia_
 
------------------------------------------------------
+- [X] Bloco 17: _Context API e React Hooks_
 
-## [Continua...]
+- [X] Bloco 18: _Projeto App de Receitas_
+
+
+## Desenvolvimento Back-end :white_check_mark:
+
+- [X] Bloco 19: _Docker: Utilizando Containers_
+
+- [X] Bloco 20: _Introdução à SQL_
+
+- [X] Bloco 21: _Funções SQL, JOINs e Normalização_
+
+- [X] Bloco 22: _Introdução ao desenvolvimento Web com Node.js_
+
+- [X] Bloco 23: _Node.js: Camada de Serviço e Arquitetura Rest e Restful_
+
+- [X] Bloco 24: _Node.js: ORM e Autenticação_
+
+- [X] Bloco 25: _Deployment_
+
+- [X] Bloco 26: _TypeScritp_
+
+- [X] Bloco 27: _Programação Orientada a Objetos(POO) e SOLID_
+
+- [X] Bloco 28: _Projeto TFC -Trybe Futebol Club_
+
+- [X] Bloco 29: _Introdução ao MongoDB_
+
+- [X] Bloco 30: _MongoDB com Node.js e POO_
+
+- [ ] Bloco 31: _Projeto - App de Delivery_
+
+- [ ] Bloco 32: _MasterClass - VPS, CI/CD_
+
+
+## Ciência da Computação :white_check_mark:
+
+- [ ] Bloco 33: _Introdução à Python_
+
+- [ ] Bloco 34: _Padrões de Projeto_
+
+- [ ] Bloco 35: _Redes e Raspagem de Dados_
+
+- [ ] Bloco 36: _Algoritmos_
+
+- [ ] Bloco 37: _Estrutura de Dados I: Arrays, Listas, Filas e Pilhas_
+
+- [ ] Bloco 38: _Estruturas de Dados II: Hashmaps e Sets_
