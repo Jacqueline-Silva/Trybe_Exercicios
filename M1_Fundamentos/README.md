@@ -27,13 +27,13 @@
 - [X] 4-4: _JavaScript - Objetos e funções_
 - [X] 4-5: _[Projeto - Playground Functions](https://github.com/Jacqueline-Silva/playground-functions)_
 
-### Bloco 5: Introdução - JavaScript - Projetos
+### Bloco 5 - JavaScript: DOM, Eventos e Web Storage
 
 - [X] 5-1: _JavaScript - DOM e seletores_
 - [X] 5-2: _JavaScript - Trabalhando com elementos_
 - [X] 5-3: _JavaScript - Eventos_
 - [X] 5-4: _JavaScript - Web Storage_
-- [X] 5-5: _JavaScript - Fundamentos e Projetos
+- [X] 5-5: _JavaScript - Fundamentos e Projetos_
 - [X] 5-5: _[Projeto - Arte com Pixels](https://github.com/Jacqueline-Silva/pixels-art)_
 - [X] 5-7: _[Projeto bônus - Lista de tarefas](https://github.com/Jacqueline-Silva/todo-list)_
 - [X] 5-7: _[Projeto bônus - Carta Misteriosa](https://github.com/Jacqueline-Silva/mistery-letter)_
