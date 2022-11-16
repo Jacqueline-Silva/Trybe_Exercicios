@@ -49,7 +49,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [X] Bloco 18: _Projeto App de Receitas_
 
 
-## Desenvolvimento Back-end :white_check_mark:
+## Desenvolvimento Back-end :heavy_check_mark:
 
 - [X] Bloco 19: _Docker: Utilizando Containers_
 
@@ -75,18 +75,18 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [X] Bloco 30: _MongoDB com Node.js e POO_
 
-- [ ] Bloco 31: _Projeto - App de Delivery_
+- [X] Bloco 31: _Projeto - App de Delivery_
 
-- [ ] Bloco 32: _MasterClass - VPS, CI/CD_
+- [X] Bloco 32: _MasterClass - VPS, CI/CD_
 
 
 ## Ciência da Computação :white_check_mark:
 
-- [ ] Bloco 33: _Introdução à Python_
+- [X] Bloco 33: _Introdução à Python_
 
-- [ ] Bloco 34: _Padrões de Projeto_
+- [X] Bloco 34: _Padrões de Projeto_
 
-- [ ] Bloco 35: _Redes e Raspagem de Dados_
+- [X] Bloco 35: _Redes e Raspagem de Dados_
 
 - [ ] Bloco 36: _Algoritmos_
 
