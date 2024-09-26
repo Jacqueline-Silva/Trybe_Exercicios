@@ -1,0 +1,3 @@
+use('sample')
+
+db.products.find().count();

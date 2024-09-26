@@ -1,0 +1,10 @@
+use('book')
+
+// DEPRECIADO:
+// db.books.find(
+//   { status: 'PUBLISH'}
+// ).count();
+
+db.books.countDocuments(
+  { status: 'PUBLISH' }
+);

@@ -1,0 +1,10 @@
+use('cinema')
+
+db.movies.updateOne(
+  { title: 'Batman' },
+  { 
+    $pull: { category: { 
+      $in: ['action']
+    }}
+  }
+);

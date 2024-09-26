@@ -1,0 +1,5 @@
+use('test')
+
+db.bios.find({ 
+  'awards.year': { $gt: 1980 }
+}).limit(5).pretty();

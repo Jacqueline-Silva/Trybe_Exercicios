@@ -1,0 +1,6 @@
+use('class')
+
+db.movies.updateOne(
+  { title: { $in: ['Batman', 'Home Alone'] } },
+  { $max: { imdbRating: 17 } }
+);

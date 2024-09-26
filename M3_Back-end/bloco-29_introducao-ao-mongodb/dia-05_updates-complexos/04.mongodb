@@ -1,0 +1,6 @@
+use('cinema')
+
+db.movies.updateOne(
+  { title: 'Batman' },
+  { $pop: { category: -1 } }
+);

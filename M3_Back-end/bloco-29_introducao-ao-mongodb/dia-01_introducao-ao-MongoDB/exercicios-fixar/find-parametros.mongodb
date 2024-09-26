@@ -1,0 +1,6 @@
+use('sample')
+
+db.products.find(
+  { productName: 'Lapis' },
+  {  _id: 0, stock: 0 }
+);
